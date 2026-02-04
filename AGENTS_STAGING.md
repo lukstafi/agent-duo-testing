@@ -27,6 +27,8 @@ The `.peer-sync/` directory contains coordination files for the agent-duo workfl
 - `round` - Current round number
 - `phase` - Current phase name
 
+The `{agent}.status` files use `state|timestamp|message` values; capturing these in observation logs helps trace phase transitions and cross-agent updates.
+
 When documenting observations, use ISO 8601 UTC timestamps for consistency across agents.
 
 <!-- End entry -->
