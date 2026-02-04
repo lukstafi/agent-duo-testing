@@ -15,3 +15,20 @@ When running parallel sessions (alpha/beta), observation files should include ph
 When searching with rg and the pattern begins with a dash, pass -- before the pattern (e.g., rg -- -alpha-) to avoid flag parsing errors.
 
 <!-- End entry -->
+
+<!-- Entry: duo-parallel-alpha-claude | 2026-02-04 -->
+### Duo workflow sync directory structure
+
+The `.peer-sync/` directory contains coordination files for the agent-duo workflow. Key files include:
+- `{agent}.status` - Current agent status with timestamp
+- `plan-{agent}.md` - Implementation plans written during plan phase
+- `plan-review-{agent}.md` - Plan reviews written during plan-review phase
+- `reviews/round-{N}-{reviewer}-reviews-{reviewee}.md` - Work reviews by round
+- `round` - Current round number
+- `phase` - Current phase name
+
+The `{agent}.status` files use `state|timestamp|message` values; capturing these in observation logs helps trace phase transitions and cross-agent updates.
+
+When documenting observations, use ISO 8601 UTC timestamps for consistency across agents.
+
+<!-- End entry -->
