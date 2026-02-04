@@ -43,11 +43,13 @@ ttyd-mode
 
 ## Sibling Session Check
 
-- Looked for `../*-beta-*` worktrees
-- Result: **No beta worktrees visible**
+- Checked parent directory for beta worktrees
+- Found: `../agent-duo-testing-solo-parallel-beta` (did not enter)
+- Note: Initial search pattern `../*-beta-*` missed this due to naming convention
 
 ## Phase Log
 
 | Timestamp | Phase | Notes |
 |-----------|-------|-------|
 | 2026-02-04T13:14:44Z | work (round 1) | Initial observation created |
+| 2026-02-04T13:16:28Z | work (round 2) | Fixed sibling session check - beta worktree is visible |
