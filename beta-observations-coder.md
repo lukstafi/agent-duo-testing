@@ -8,7 +8,7 @@
 - **Branch name**: solo-parallel-beta
 - **Initial timestamp**: 2026-02-04T12:04:12Z
 
-### Files in `.peer-sync/`
+### Files in `.peer-sync/` (point-in-time snapshot)
 
 ```
 auto-finish
@@ -59,3 +59,8 @@ Alpha worktree exists at /Users/lukstafi/agent-duo-testing-solo-parallel-alpha (
 - **Timestamp**: 2026-02-04T12:04:16Z
 - **Phase**: work
 - **Notes**: Implementation of observation file, entering work phase round 1
+
+### Work Phase (Round 2)
+- **Timestamp**: 2026-02-04T12:05:34Z
+- **Phase**: work
+- **Notes**: Reviewer approved; added optional clarification about point-in-time snapshot
