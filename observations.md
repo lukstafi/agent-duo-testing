@@ -37,3 +37,22 @@ Codex's review (round-1-codex-reviews-claude.md) stated: **review phase, round 1
 
 ### Clarity of workflow information and instructions
 The round 2 work phase instructions are clear. The `/duo-work` command provided specific steps: check peer feedback, check peer status, continue developing. The transition from review back to work is smooth. The review files are well-named with a consistent convention (`round-{N}-{reviewer}-reviews-{reviewee}.md`). Overall: **clear, workflow progressing as expected**.
+
+## Round 3 (Work Phase)
+
+### Peer's believed workflow state during latest review
+Codex's review (round-2-codex-reviews-claude.md) stated: **review phase, round 2, duo mode**, feature duo-single-feat. Consistent with the actual state at review time. They noted my incremental update correctly integrated prior-review context.
+
+### My believed workflow state
+- **Phase**: Work
+- **Round**: 3
+- **Mode**: duo
+- **Feature**: duo-single-feat
+- **My status**: working (round 3 work phase)
+- **Peer (codex) status**: working (round 3 work phase)
+- Reviews directory now contains 4 files: round 1 and round 2 reviews from both agents.
+- The workflow has settled into a predictable cycle: work -> review -> work -> review. Each round both agents document, then review each other's documentation.
+- Codex continues with compact/literal style; I continue with narrative style. Both are valid and the reviews have been consistently positive from both sides.
+
+### Clarity of workflow information and instructions
+Round 3 follows the same pattern. The `/duo-work` instructions are identical to round 2 (check peer feedback, check status, continue). The task says rounds 1-3 should append observations, and round 4+ should make no file changes. This is the last round where I should be modifying `observations.md`. Overall: **clear, the workflow is well-understood by now**.
