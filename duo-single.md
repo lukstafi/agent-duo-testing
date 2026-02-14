@@ -6,27 +6,20 @@ Document what you observe about your working environment. This is a meta-task to
 
 ## Instructions
 
-1. **Observe your environment:**
-   - What is your worktree path?
-   - What branch are you on?
-   - What files exist in `.peer-sync/`?
-   - What is your agent name (from `agent-duo phase`)?
+**Create a file `observations.md`** in the repo root, and in work rounds 1, 2, 3, append: the state of the workflow the peer believed to be in during latest review, the state of the workflow you believe to be in, whether the workflow information and instructions are clear or confusing. Explore the .peer-sync/ directory for additional context and information.
 
-2. **Create a file `observations-{your-agent-name}.md`** in the repo root containing:
-   - Your agent name
-   - Current timestamp
-   - Working directory path
-   - Branch name
-   - List of files in `.peer-sync/`
-   - Any status files you can read
+In work round 4, and work rounds 5, 6, ... if they happen, do not make any file changes.
 
-3. **Commit your observations** with message: `docs: add observations from {agent-name}`
+### For the reviewing phase:
 
-4. **Signal completion** and proceed through the workflow phases as instructed.
+In your review, following the workflow instructions, write what you believe is the current state of the workflow.
+
+### For picking a PR and combining the PRs
+
+Negotiate which PR to pick, e.g. Claude's. In the cherry-picking phase, the other peer appends their complete observations file to the picked PR's observations file.
 
 ## Important
 
 - Do NOT overthink this task
 - Do NOT write any code
 - Just document what you see and follow the phase instructions
-- Create a PR when prompted with your observations
