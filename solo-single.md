@@ -6,7 +6,7 @@ Document what you observe about your working environment. This is a meta-task to
 
 ### For Coder:
 
-**Create a file `observations-coder.md`** in the repo root, and in each round, append: the state of the workflow the reviewer believed to be in during latest review, the state of the workflow you believe to be in, whether the workflow information and instructions are clear or confusing. Explore the .peer-sync/ directory for additional context and information.
+**Create a file `observations-coder.md`** in the repo root, and in each round, append: the state of the workflow the reviewer believed to be in during latest review, the state of the workflow you believe to be in, whether the workflow information and instructions are clear or confusing.
 
 ### For Reviewer:
 
