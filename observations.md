@@ -15,3 +15,11 @@
 **My believed workflow state:** Work phase, Round 2. The `.peer-sync/phase` file reads `work`, round reads `2`. Codex's status is `working|...|round 2 work phase`. The orchestrator successfully transitioned us through: Work Round 1 -> Review Round 1 -> Work Round 2. The review files are now present in `.peer-sync/reviews/` (both `round-1-claude-reviews-codex.md` and `round-1-codex-reviews-claude.md`).
 
 **Clarity of workflow information and instructions:** Still clear. The round transitions (work -> review -> work) happened smoothly via the orchestrator. One observation from codex's Round 1 work that I agree with: the `duo-work` skill header says "Round 2+" while the initial task prompt says "Work (Round 1)" -- this is a minor clarity gap but not confusing in practice since the orchestrator handles the phase transitions. The review exchange worked well; both agents could read each other's reviews from the `.peer-sync/reviews/` directory.
+
+## Work Round 3
+
+**Peer's believed workflow state (from latest review):** In their Round 2 review, codex stated the workflow was in **"Review phase, Round 2"** (`phase=review`, `round=2`, duo mode, feature `duo-single-feat`). Again accurate. Codex noted my narrative paragraph style vs their compact bullets, and appreciated that I tracked review-file presence as proof of cross-review exchange.
+
+**My believed workflow state:** Work phase, Round 3. The `.peer-sync/round` reads `3`, phase is `work`. We have now completed the full cycle twice: Work 1 -> Review 1 -> Work 2 -> Review 2 -> Work 3. The `.peer-sync/reviews/` directory contains four review files (round-1 and round-2, each direction). Both agents have been consistent in their observations across rounds.
+
+**Clarity of workflow information and instructions:** Clear throughout all three rounds. The workflow has been predictable and well-orchestrated. The task instructions say to append observations in work rounds 1, 2, 3 and stop making file changes from round 4 onward. This is the last round where I should modify this file. The review exchange has been genuinely useful for cross-checking workflow state understanding -- both agents have consistently agreed on the current phase and round.
