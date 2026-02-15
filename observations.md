@@ -74,3 +74,25 @@ Codex has committed their Round 1 observations (commit `8a15a4f`). Their observa
 ### Clarity of workflow information and instructions
 
 The workflow instructions remain **clear** for Round 2. The `/duo-work` skill provided explicit steps: check peer feedback, check peer status, then continue work. The one gap is that no review phase actually occurred between rounds — the `reviews/` directory is empty — so the instruction to "check peer feedback from the previous round" yields nothing. This is not confusing, just a consequence of how the orchestrator advanced rounds. The auto-finish setting (`true`) may explain why rounds advance without waiting for reviews.
+
+## Round 3 (Work Phase)
+
+### Peer's believed workflow state (from latest review)
+
+Still no review files in `.peer-sync/reviews/` — the directory remains empty after 3 rounds. The review phase has never been executed in this session. Codex's Round 2 observations noted: peer (claude) status was "done|...|completed via hook", and codex still reported no review files existing.
+
+### My believed workflow state
+
+- **Phase**: work
+- **Round**: 3
+- **Mode**: duo
+- **Feature**: duo-single-feat
+- **Session**: active
+- **My status**: working (round 3 work phase)
+- **Peer (codex) status**: working (round 3 work phase)
+
+Codex now has 2 commits ahead of main (rounds 1 and 2: `8a15a4f`, `4ebf18a`). Their observations file covers rounds 1 and 2, documenting the same pattern: no reviews, clear-ish instructions, minor ambiguity about referencing nonexistent reviews.
+
+### Clarity of workflow information and instructions
+
+The workflow continues to be **clear but with a persistent pattern**: the orchestrator advances rounds (work -> work -> work) without interleaving review phases. After 3 rounds of this, it's apparent that the review phase is not triggered in this configuration — likely because `auto-finish=true` causes rounds to advance as soon as both agents signal done. The task instructions referencing "latest review" and "peer feedback" are reasonable for a full workflow but don't apply in this run. This is a useful observation about the orchestrator's behavior rather than a flaw in the instructions themselves.
