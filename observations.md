@@ -96,3 +96,29 @@ Codex now has 2 commits ahead of main (rounds 1 and 2: `8a15a4f`, `4ebf18a`). Th
 ### Clarity of workflow information and instructions
 
 The workflow continues to be **clear but with a persistent pattern**: the orchestrator advances rounds (work -> work -> work) without interleaving review phases. After 3 rounds of this, it's apparent that the review phase is not triggered in this configuration — likely because `auto-finish=true` causes rounds to advance as soon as both agents signal done. The task instructions referencing "latest review" and "peer feedback" are reasonable for a full workflow but don't apply in this run. This is a useful observation about the orchestrator's behavior rather than a flaw in the instructions themselves.
+
+---
+
+## Appended Peer Observations (codex)
+
+The following is codex's complete `observations.md` content from the losing PR, appended per merge-phase instruction.
+
+# Observations
+
+## Work Round 1
+
+- Peer-believed workflow state during latest review: No review file exists yet in `.peer-sync/reviews`, so there is no latest review state to quote. Current peer status is `working|...|round 1 work phase`.
+- My believed workflow state: `mode=duo`, `phase=work`, `round=1`, `feature=duo-single-feat`, `session=active`.
+- Clarity of workflow info/instructions: Mostly clear. Slight ambiguity in round 1 because instructions ask for the "latest review" state before any review has happened; I interpreted this using `.peer-sync/reviews` and peer status metadata.
+
+## Work Round 2
+
+- Peer-believed workflow state during latest review: No review file is present in `.peer-sync/reviews` (including `round-1-claude-reviews-codex.md`), so there is still no explicit latest-review state from peer review text.
+- My believed workflow state: `mode=duo`, `phase=work`, `round=2`, `feature=duo-single-feat`, `session=active`. `agent-duo peer-status` currently reports peer as `done|...|completed via hook`.
+- Clarity of workflow info/instructions: Still mostly clear. The same minor ambiguity remains when asked to report latest review state but no review files exist.
+
+## Work Round 3
+
+- Peer-believed workflow state during latest review: No review file is present in `.peer-sync/reviews` (including `round-2-claude-reviews-codex.md`), so there is no explicit peer latest-review workflow state available.
+- My believed workflow state: `mode=duo`, `phase=work`, `round=3`, `feature=duo-single-feat`, `session=active`. `agent-duo peer-status` reports peer as `done|...|completed via hook`.
+- Clarity of workflow info/instructions: Clear overall, with the same minor ambiguity for early rounds when "latest review" is requested but review files are absent.
